@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "ชำระหนี้", file: "payment.html", key: "payment" },
     { name: "การเปลี่ยนเงื่อนไข", file: "condition.html", key: "condition" },
     { name: "จัดการหนี้องค์กร", file: "org.html", key: "org" },
-    { name: "การบันทึกบัญชี", file: "account.html", key: "account" }
+    { name: "การบันทึกบัญชี", file: "account.html", key: "account" },
+    { name: "องค์กรนายจ้าง", file: "employer-org.html", key: "employer-org" },
+    { name: "จัดการหนี้องค์กร", file: "manage-debt.html", key: "manage-debt" }
   ];
 
   const topMenu = document.getElementById("topMenu");
