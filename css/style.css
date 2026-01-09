@@ -71,7 +71,7 @@ nav{
 /* ===== SIDEBAR ===== */
 .sidebar {
   width: 260px;
-  background: #f8f9fa;
+  background: #fff;
   border-right: 1px solid #ddd;
   transition: all .25s ease;
   overflow: hidden;
@@ -90,16 +90,15 @@ nav{
   padding: 0;
   margin: 0;
 }
-.sidebar li {
-  padding: 10px 16px;
+.sidebar li { 
   cursor: pointer;
   font-size: 14px;
 }
-.sidebar li:hover,
+/* .sidebar li:hover,
 .sidebar li.active {
   background: #08538b;
   color: #fff;
-}
+} */
 /* ===== CONTENT ===== */
 .content {
   flex: 1;
@@ -114,21 +113,18 @@ nav{
 
 .sidebar-menu li {
   font-size: 14px;
-}
-
+} 
 .menu-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
   cursor: pointer;
-}
-
+} 
 .menu-item.active > .menu-title {
   background: #08538b;
   color: #fff;
-}
-
+} 
 .arrow {
   font-size: 12px;
   transition: transform .2s ease;
@@ -142,8 +138,7 @@ nav{
 .submenu {
   list-style: none;
   padding-left: 0;
-  display: none;
-  background: #f1f1f1;
+  display: none; 
 }
 
 .submenu li {
@@ -153,7 +148,8 @@ nav{
 }
 
 .submenu li:hover {
-  background: #dce9f5;
+  background: #08538b;
+  color: #fff;
 }
 
 /* เปิด submenu */
