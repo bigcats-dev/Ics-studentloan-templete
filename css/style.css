@@ -42,7 +42,7 @@ nav{
   padding-right: 20px;
 }
 .topbar div:nth-child(1){
-  width: 260px; 
+  width: 280px; 
   padding-left: 20px;
 }
 .top-menu a {
@@ -70,7 +70,7 @@ nav{
 }
 /* ===== SIDEBAR ===== */
 .sidebar {
-  width: 260px;
+  width: 280px;
   background: #fff;
   border-right: 1px solid #ddd;
   transition: all .25s ease;
@@ -157,6 +157,72 @@ nav{
   display: block;
 }
 
+.topbar {
+  background: #fff;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 10;
+}
+
+/* WRAPPER */
+.top-menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* MENU */
+.top-menu {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding: 6px 0;
+  flex: 1;
+}
+
+/* ซ่อน scrollbar */
+.top-menu::-webkit-scrollbar {
+  display: none;
+}
+.top-menu {
+  scrollbar-width: none;
+}
+
+.top-menu a {
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  flex-shrink: 0;  
+}
+
+.top-menu a.active {
+  background: #0d6efd;
+  color: #fff;
+}
+
+/* ARROW */
+.menu-arrow {
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 10px;
+  z-index: 20;
+} 
+.top-menu-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: calc(100% - 260px);
+  overflow: hidden;  
+}
 
 
 /*   
@@ -174,4 +240,7 @@ nav{
   .pc-x{
     display: none !important;
   }   
+  .menu-arrow {
+    display: none;
+  }
 }   
