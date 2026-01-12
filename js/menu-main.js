@@ -1,20 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuData = [
-    { name: "หน้าแรก", file: "index.html", key: "home" },
+    { name: "หน้าแรก", file: "index.html", key: "home", roles: "*" },
     {
       name: "งานติดตามหนี้",
       file: "debt-collection.html",
       key: "debt-collection",
+      roles: "*",
     },
-    { name: "การปรับปรุงข้อมูล", file: "update.html", key: "update" },
-    { name: "ดอกเบี้ย/เบี้ยปรับ", file: "interest.html", key: "interest" },
-    { name: "การแจ้งเตือน", file: "notify.html", key: "notify" },
-    { name: "ชำระหนี้", file: "payment.html", key: "payment" },
-    { name: "การเปลี่ยนเงื่อนไข", file: "condition.html", key: "condition" },
-    { name: "จัดการหนี้องค์กร", file: "org.html", key: "org" },
+    // เห็นเฉพาะ approver,checker
+    {
+      name: "การปรับปรุงข้อมูล",
+      file: "update.html",
+      key: "update",
+      roles: "approver,checker",
+    },
+    // เห็นฌแพาะ admin
+    {
+      name: "ดอกเบี้ย/เบี้ยปรับ",
+      file: "interest.html",
+      key: "interest",
+      roles: "admin",
+    },
+    {
+      name: "การแจ้งเตือน",
+      file: "notify.html",
+      key: "notify",
+      roles: "admin",
+    },
+    { name: "ชำระหนี้", file: "payment.html", key: "payment", roles: "admin" },
+    {
+      name: "การเปลี่ยนเงื่อนไข",
+      file: "condition.html",
+      key: "condition",
+      roles: "admin",
+    },
+    { name: "จัดการหนี้องค์กร", file: "org.html", key: "org", roles: "admin" },
     { name: "การบันทึกบัญชี", file: "account.html", key: "account" },
-    { name: "องค์กรนายจ้าง", file: "employer-org.html", key: "employer-org" },
-    { name: "จัดการหนี้องค์กร", file: "manage-debt.html", key: "manage-debt" },
+    {
+      name: "องค์กรนายจ้าง",
+      file: "employer-org.html",
+      key: "employer-org",
+      roles: "*",
+    },
+    {
+      name: "จัดการหนี้องค์กร",
+      file: "manage-debt.html",
+      key: "manage-debt",
+      roles: "*",
+    },
   ];
 
   const topMenu = document.getElementById("topMenu");
@@ -25,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     a.href = menu.file;
     a.dataset.menu = menu.key;
     a.innerText = menu.name;
+    a.dataset.roles = menu.roles;
 
     if (
       menu.file === currentPage ||
