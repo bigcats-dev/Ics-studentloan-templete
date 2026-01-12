@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const menuData = [
     { name: "หน้าแรก", file: "index.html", key: "home" },
+    { name: "งานติดตามหนี้", file: "debt-collection.html", key: "debt-collection" },
     { name: "การปรับปรุงข้อมูล", file: "update.html", key: "update" },
     { name: "ดอกเบี้ย/เบี้ยปรับ", file: "interest.html", key: "interest" },
     { name: "การแจ้งเตือน", file: "notify.html", key: "notify" },
