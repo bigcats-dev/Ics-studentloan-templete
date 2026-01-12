@@ -156,7 +156,12 @@ nav{
 .submenu.open {
   display: block;
 }
-
+.text-prev{
+  font-size: 14px;
+}
+.text-map{
+  font-size: 12px;
+}
 
 
 /*   
