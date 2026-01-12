@@ -158,10 +158,19 @@ nav{
 }
 .text-prev{
   font-size: 14px;
+  padding-left: 30px;
 }
 .text-map{
   font-size: 12px;
 }
+.card .card-header{
+  font-size: 14px;
+}
+.card .card-body{
+  font-size: 14px;
+}
+
+
 
 
 /*   
